@@ -1,0 +1,4 @@
+class themeProp {
+    constructor() {
+    }
+}
