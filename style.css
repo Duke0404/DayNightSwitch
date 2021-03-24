@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+:root {
+    --switch-position: flex-end;
+}
+
 body {
     color: #454545;
     background: url(day.svg) no-repeat center center fixed;
@@ -31,7 +35,7 @@ h1 {
 
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: var(--switch-position);
 }
 
 #switchFG {
