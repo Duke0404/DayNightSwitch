@@ -1,7 +1,7 @@
 class themeProp {
-    constructor(background, textColor, switchPosition, switchColor) {
+    constructor(name, background, textColor, switchPosition, switchColor) {
         this.properties = [];
-        this.properties[0] = themeProp.constructor.name;
+        this.properties[0] = name;
         this.properties[1] = background;
         this.properties[2] = textColor;
         this.properties[3] = switchPosition;
@@ -9,11 +9,10 @@ class themeProp {
     }
 }
 
-const light = new themeProp("https://raw.githubusercontent.com/Duke0404/DayNightSwitch/479251ca14479c7f18949ed978b2c9c9440cb38f/images/Day.svg", "#454545", "flex-end", "#FFB800");
-const dark = new themeProp("https://raw.githubusercontent.com/Duke0404/DayNightSwitch/479251ca14479c7f18949ed978b2c9c9440cb38f/images/Night.svg", "#fff", "flex-start", "#70869e");
+const light = new themeProp("Light", "images/day.svg", "#454545", "flex-end", "#FFB800");
+const dark = new themeProp("Dark", "images/night.svg", "#fff", "flex-start", "#70869e");
 const root = document.documentElement;
 const themeName = document.getElementById("themeName");
-let darkTheme = false;
 
 function insertCSS(theme) {
     root.style.setProperty("--background", "url(" + theme.properties[1] + ") no-repeat center center fixed");
@@ -32,4 +31,9 @@ function themeSwitch() {
         insertCSS(dark);
     }
     darkTheme = !darkTheme;
+}
+
+let darkTheme = false;
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    themeSwitch();
 }
