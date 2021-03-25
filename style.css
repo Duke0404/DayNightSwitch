@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 :root {
+    --background: url(images/day.svg) no-repeat center center fixed;
+    --text-color: #454545;
     --switch-position: flex-end;
 }
 
 body {
-    color: #454545;
-    background: url(day.svg) no-repeat center center fixed;
+    color: var(--text-color);
+    background: var(--background);
     background-size: cover;
 
     font-family: 'Poppins', sans-serif;
