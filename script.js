@@ -10,8 +10,8 @@ class themeProp {
     }
 }
 
-const light = new themeProp("Light", "/images/day.svg", "#454545", "flex-end", "#FFB800", "/images/sun.svg");
-const dark = new themeProp("Dark", "/images/night.svg", "#fff", "flex-start", "#70869e", "/images/moon.svg");
+const light = new themeProp("Light", "https://raw.githubusercontent.com/Duke0404/DayNightSwitch/main/images/Day.svg", "#454545", "flex-end", "#FFB800", "https://raw.githubusercontent.com/Duke0404/DayNightSwitch/main/images/sun.svg");
+const dark = new themeProp("Dark", "https://raw.githubusercontent.com/Duke0404/DayNightSwitch/main/images/Night.svg", "#fff", "flex-start", "#70869e", "https://raw.githubusercontent.com/Duke0404/DayNightSwitch/main/images/moon.svg");
 const root = document.documentElement;
 
 function insertCSS(theme) {
