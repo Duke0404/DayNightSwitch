@@ -10,8 +10,8 @@ class themeProp {
     }
 }
 
-const light = new themeProp("Light", "images/day.svg", "#454545", "flex-end", "#FFB800", "images/sun.svg");
-const dark = new themeProp("Dark", "images/night.svg", "#fff", "flex-start", "#70869e", "images/moon.svg");
+const light = new themeProp("Light", "/images/day.svg", "#454545", "flex-end", "#FFB800", "/images/sun.svg");
+const dark = new themeProp("Dark", "/images/night.svg", "#fff", "flex-start", "#70869e", "/images/moon.svg");
 const root = document.documentElement;
 
 function insertCSS(theme) {
